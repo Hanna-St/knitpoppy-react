@@ -37,3 +37,11 @@
     transform: translateY(0px);
   }
 }
+
+.font-face-am {
+  font-family: "AmaticSCBold";
+}
+
+.font-face-qs {
+  font-family: 'Quicksand', sans-serif;
+}
