@@ -1,14 +1,24 @@
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import WorksPage from './pages/WorksPage';
+import TrackingPage from './pages/TrackingPage';
+// import WorksTypePage from './pages/WorksTypePage';
+// import DetailWorksPage from './pages/DetailWorksPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <h2>"Hello Knitpoppy!"</h2>
-      <p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p>
-      <p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p><p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p><p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p><p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p><p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p><p>I've been using it nonstop since I got it. I love that it's a little more on the "smaller" side as I am trying to get use to carrying less items in my bags. It fits all the necessities! Phone, keys, wallet, AirPods, chapstick and hand sanitizer/lotion. I've also managed to carry my iPad with me on a few occasions and a make bag. So it definitely will carry what you need! It seems pretty sturdy and I think it will last me a while, which I hope because I really like this bag!</p>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='works' element={<WorksPage />} />
+        <Route path='tracking' element={<TrackingPage />} />
+        <Route path='contact' element={<ContactPage />} />
+      </Routes>
       <Footer />
     </div>
   );

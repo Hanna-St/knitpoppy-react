@@ -1,5 +1,5 @@
 import { Container, Col, Row } from 'reactstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,21 +8,32 @@ const Footer = () => {
                 <Row>
                     <Col sm='6' className='text-center'>
                         <h5>Links</h5>
-                        {/* <ul className='list-unstyled'>
+                        <ul className='list-unstyled'>
                             <li>
-                                <Link to='/'>Leave Feedback</Link>
+                                <Link style={{ textDecoration: 'none' }}
+                                className='text-info' to='/'>Leave Feedback</Link>
                             </li>
                             <li>
-                                <Link to='/'>Shipping&Returns</Link>
+                                <Link style={{ textDecoration: 'none' }} className='text-info' to='/'>Shipping&Returns</Link>
                             </li>
                             <li>
-                                <Link to='/'>Contact</Link>
+                                <Link style={{ textDecoration: 'none' }} className='text-info' to='/contact'>Contact</Link>
                             </li>
-                        </ul> */}
+                        </ul>
                     </Col>
                     <Col sm='6' className='text-center'>
                         <h4>STAY CONNECTED</h4>
                         <h6>Get Amazing Discounts, Promotions Directly Into Your Inbox.</h6>
+                        <form>
+                        <div class="form-group row">
+                            <div class="col-sm-9 p-0">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" />
+                            </div>
+                            <div class="col-sm-3">
+                                <button type="submit" class="btn btn-info">SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </form>
                     </Col>
                 </Row>
                 <Row>
