@@ -1,6 +1,10 @@
 import { Container } from "reactstrap";
 import PictureAndText from "../components/PictureAndText";
 import DesignerPhoto from '../app/assets/img/designer-foto.jpg';
+import Reviews from "../components/Reviews";
+import { FEEDBACKS } from "../app/shared/FEEDBACKS";
+import FeaturedCollection from "../components/FeaturedCollection";
+import { WORKS } from '../app/shared/WORKS';
 
 const HomePage = () => {
     const title = "Handmade with Love";
@@ -8,10 +12,10 @@ const HomePage = () => {
 
     return (
         <Container>
-            {/* <Carousel />
-            <Reviews /> */}
+            {/* <Carousel /> */}
+            <Reviews feedbacksArray={FEEDBACKS} />
             <PictureAndText picture={DesignerPhoto} title={title} text={text}/>
-            {/* <FeaturedCollection /> */}
+            <FeaturedCollection imageLink={WORKS}/>
         </Container>
     )
 };

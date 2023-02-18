@@ -21,8 +21,7 @@ h2, h4, h5 {
 }
 
 .row-content {
-  padding: 150px 100px;
-  border-bottom: 1px ridge;
+  padding: 50px 100px;
   min-height: 200px;
 }
 
