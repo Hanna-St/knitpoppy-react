@@ -8,6 +8,7 @@ import shellImg from '../assets/img/shell.jpeg';
 import bigBasketImg from '../assets/img/bigBasket.jpg';
 import smallBasketImg from '../assets/img/smallBasket.jpg';
 import macrameHangingLeavesImg from '../assets/img/macrameHangingLeaves.jpg';
+import circleImg from '../assets/img/circle.jpeg';
 
 export const WORKS = [
     {
@@ -25,7 +26,7 @@ export const WORKS = [
         id: 1,
         name: 'Half Marshmallow',
         image: halfMarshmallowImg,
-        featured: false,
+        featured: true,
         type: 'bag',
         size: '10 x 8 inch',
         price: 120,
@@ -55,7 +56,7 @@ export const WORKS = [
         id: 4,
         name: 'Sagma',
         image: sagmaImg,
-        featured: false,
+        featured: true,
         type: 'bag',
         size: '8.2 x 5.5 inch',
         price: 100,
@@ -65,7 +66,7 @@ export const WORKS = [
         id: 5,
         name: 'String Bag',
         image: stringBagImg,
-        featured: false,
+        featured: true,
         type: 'bag',
         size: '10.6 x 8.6 inch',
         price: 70,
@@ -109,6 +110,16 @@ export const WORKS = [
         type: 'home_decor',
         size: '17.7 x 37.4 inch',
         price: 50,
+        description: ''
+    },
+    {
+        id: 10,
+        name: 'Circle',
+        image: circleImg,
+        featured: true,
+        type: 'bag',
+        size: '8.6 x 8.6 inch',
+        price: 105,
         description: ''
     }
 ]

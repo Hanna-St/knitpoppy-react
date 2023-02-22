@@ -1,4 +1,14 @@
-import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem, Container, Row, Col } from 'reactstrap';
+import { 
+    Navbar, 
+    NavbarBrand, 
+    Collapse, 
+    NavbarToggler, 
+    Nav, 
+    NavItem, 
+    Container, 
+    Row, 
+    Col 
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import PoppyLogo from '../app/assets/img/logo.png';
 import { useState } from 'react';

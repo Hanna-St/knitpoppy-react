@@ -5,6 +5,8 @@ import Reviews from "../components/Reviews";
 import { FEEDBACKS } from "../app/shared/FEEDBACKS";
 import FeaturedCollection from "../components/FeaturedCollection";
 import { WORKS } from '../app/shared/WORKS';
+import { CAROUSEL } from "../app/shared/CAROUSEL";
+import MainCarousel from '../components/MainCarousel';
 
 const HomePage = () => {
     const title = "Handmade with Love";
@@ -12,10 +14,10 @@ const HomePage = () => {
 
     return (
         <Container>
-            {/* <Carousel /> */}
+            <MainCarousel items={CAROUSEL}/>
             <Reviews feedbacksArray={FEEDBACKS} />
             <PictureAndText picture={DesignerPhoto} title={title} text={text}/>
-            <FeaturedCollection imageLink={WORKS}/>
+            <FeaturedCollection imageWorks={WORKS}/>
         </Container>
     )
 };
