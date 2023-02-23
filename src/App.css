@@ -19,6 +19,9 @@ h2, h4, h5 {
   
   max-width: 9rem;
 }
+.dropdown-menu a:hover {
+  background-color: rgba(124, 246, 246, 0.487);
+}
 
 .row-content {
   padding: 50px 50px;

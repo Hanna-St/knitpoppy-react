@@ -1,5 +1,12 @@
+import { Container } from "reactstrap";
+import SubHeader from "../components/SubHeader";
+
 const TrackingPage = () => {
-    return <div>Track your order</div>;
+    return (
+        <Container>
+            <SubHeader current='Tracking' />
+        </Container>
+    );
 };
 
 export default TrackingPage;

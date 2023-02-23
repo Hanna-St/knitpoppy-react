@@ -4,17 +4,24 @@ import {
     Collapse, 
     NavbarToggler, 
     Nav, 
-    NavItem, 
+    NavItem,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle, 
     Container, 
     Row, 
     Col 
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import PoppyLogo from '../app/assets/img/logo.png';
 import { useState } from 'react';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggle = () => setDropdownOpen(!dropdownOpen);
 
     return (
         <Navbar light sticky='top' expand='md'>
@@ -27,9 +34,19 @@ const Header = () => {
                     <NavItem>
                         <NavLink className='nav-link' to='/'>Home</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink className='nav-link' to='/works'>Works</NavLink>
-                    </NavItem>
+                    <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle nav caret>
+                            Works
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag={Link} to="/bags">Bags</DropdownItem>
+                            <DropdownItem tag={Link} to="/home_decor">Home Decor</DropdownItem>
+                            <DropdownItem>Shoes</DropdownItem>
+                            <DropdownItem>Carpits</DropdownItem>
+                            <DropdownItem>Hats</DropdownItem>
+                            <DropdownItem>Kitchen Accessories</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                     <NavItem>
                         <NavLink className='nav-link' to='/tracking'>Track your order</NavLink>
                     </NavItem>

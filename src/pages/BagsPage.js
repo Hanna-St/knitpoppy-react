@@ -1,12 +1,12 @@
 import { Container } from "reactstrap";
 import SubHeader from "../components/SubHeader";
 
-const WorksPage = () => {
+const BagsPage = () => {
     return (
         <Container>
-            <SubHeader current='Works' />
+            <SubHeader current='Bags' detail={true}/>
         </Container>
     );
-};
+}
 
-export default WorksPage;
+export default BagsPage;

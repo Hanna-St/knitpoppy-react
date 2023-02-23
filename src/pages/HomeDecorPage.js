@@ -1,12 +1,12 @@
 import { Container } from "reactstrap";
 import SubHeader from "../components/SubHeader";
 
-const WorksPage = () => {
+const HomeDecorPage = () => {
     return (
         <Container>
-            <SubHeader current='Works' />
+            <SubHeader current='Home Decor' detail={true}/>
         </Container>
     );
-};
+}
 
-export default WorksPage;
+export default HomeDecorPage;

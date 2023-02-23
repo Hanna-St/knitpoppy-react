@@ -8,6 +8,8 @@ import TrackingPage from './pages/TrackingPage';
 // import WorksTypePage from './pages/WorksTypePage';
 // import DetailWorksPage from './pages/DetailWorksPage';
 import './App.css';
+import BagsPage from './pages/BagsPage';
+import HomeDecorPage from './pages/HomeDecorPage';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='works' element={<WorksPage />} />
+        <Route path='bags' element={<BagsPage />} />
+        <Route path='home_decor' element={<HomeDecorPage />} />
         <Route path='tracking' element={<TrackingPage />} />
         <Route path='contact' element={<ContactPage />} />
       </Routes>

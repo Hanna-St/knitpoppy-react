@@ -20,7 +20,7 @@ export const WORKS = [
         size: '9.8 x 8.6 inch',
         price: 150,
         description: 
-            'The bag is knitted from a 4 mm polyester cord, with a leather strap and a flap. Inside the bag there is a lining with a feeder. Silver fittings. Adjustment strap.'
+            'The bag is knitted from a 4 mm polyester cord, with a leather strap and a flap. Inside the bag there is a lining with pocket. Silver accessories. Adjustment strap.'
     },
     {
         id: 1,
@@ -30,7 +30,7 @@ export const WORKS = [
         type: 'bag',
         size: '10 x 8 inch',
         price: 120,
-        description: ''
+        description: 'The bag is crocheted, knitted yarn "Biscuit" was used in the work, accessories - dark nickel. Inside the bag there is a lining with pocket. Includes 47.2 inch chain-belt and "tassel".'
     },
     {
         id: 2,

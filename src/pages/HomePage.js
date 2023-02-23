@@ -7,6 +7,7 @@ import FeaturedCollection from "../components/FeaturedCollection";
 import { WORKS } from '../app/shared/WORKS';
 import { CAROUSEL } from "../app/shared/CAROUSEL";
 import MainCarousel from '../components/MainCarousel';
+import SubHeader from "../components/SubHeader";
 
 const HomePage = () => {
     const title = "Handmade with Love";
@@ -14,10 +15,11 @@ const HomePage = () => {
 
     return (
         <Container>
-            <MainCarousel items={CAROUSEL}/>
+            <SubHeader current='Home' />
+            <MainCarousel items={CAROUSEL} />
             <Reviews feedbacksArray={FEEDBACKS} />
-            <PictureAndText picture={DesignerPhoto} title={title} text={text}/>
-            <FeaturedCollection imageWorks={WORKS}/>
+            <PictureAndText picture={DesignerPhoto} title={title} text={text} />
+            <FeaturedCollection imageWorks={WORKS} />
         </Container>
     )
 };

@@ -37,7 +37,7 @@ const MainCarousel = (props) => {
           <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
-                key={item.image}
+                key={item.id}
           >
             <img src={item.image} width='100%' alt='' />
             <CarouselCaption
@@ -51,7 +51,7 @@ const MainCarousel = (props) => {
       return (
         <Container>
             <Row className='row-content'>
-                <Col  sm='9' className='mx-auto'>
+                <Col  md='9' className='mx-auto'>
                     <Carousel
                         activeIndex={activeIndex}
                         next={next}
