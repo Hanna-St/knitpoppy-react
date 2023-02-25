@@ -24,7 +24,7 @@ const Header = () => {
     const toggle = () => setDropdownOpen(!dropdownOpen);
 
     return (
-        <Navbar light sticky='top' expand='md'>
+        <Navbar light expand='md'>
             <NavbarBrand className='ms-5' href='/'>
                 <img src={PoppyLogo}  alt='poppy logo' className='float-start' />
             </NavbarBrand>

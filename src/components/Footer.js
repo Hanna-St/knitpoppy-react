@@ -22,7 +22,7 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col sm='6' className='text-center'>
-                        <h4>STAY CONNECTED</h4>
+                        <h4>Stay Connected</h4>
                         <h6>Get Amazing Discounts, Promotions Directly Into Your Inbox.</h6>
                         <form>
                         <div class="form-group row">

@@ -4,26 +4,27 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
   Container, 
   Row, 
   Col
 } from 'reactstrap';
 
-const MainCarousel = (props) => {
-    const { items } = props;
+
+const RightPictureCarousel = (props) => {
+    const { item } = props;
+    const images = item.images;
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
     const next = () => {
         if (animating) return;
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
     };
 
     const previous = () => {
         if (animating) return;
-        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
         setActiveIndex(nextIndex);
     };
 
@@ -32,26 +33,28 @@ const MainCarousel = (props) => {
         setActiveIndex(newIndex);
     };
 
-    const slides = items.map((item) => {
+    const slides = images.map((image) => {
         return (
           <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
-                key={item.id}
+                key={image.id}
           >
-            <img src={item.image} width='100%' alt='' />
-            <CarouselCaption
-                captionText={item.subtitle}
-                captionHeader={item.title}
-            />
+            <img src={image}  width='100%' alt='' />
           </CarouselItem>
         );
     });
-    
-      return (
+
+    return (
         <Container>
-            <Row className='row-content'>
-                <Col  md='9' className='mx-auto'>
+            <Row className='align-items-center row-content'>
+                <Col className='text-center' sm='6'>
+                    <h4>{item.name}</h4>
+                    <p>{item.description}</p>
+                    <p>Size: {item.size}</p>
+                    <p>Price: {item.price} $</p>
+                </Col>
+                <Col sm='6'>
                     <Carousel
                         activeIndex={activeIndex}
                         next={next}
@@ -59,7 +62,7 @@ const MainCarousel = (props) => {
                     
                     >
                     <CarouselIndicators
-                        items={items}
+                        items={images}
                         activeIndex={activeIndex}
                         onClickHandler={goToIndex}
                     />
@@ -78,7 +81,7 @@ const MainCarousel = (props) => {
                 </Col>
             </Row>
         </Container>
-    );
+    )
 }
 
-export default MainCarousel;
+export default RightPictureCarousel;

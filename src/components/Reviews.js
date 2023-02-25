@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 const Reviews = ( props ) => {
     const { feedbacksArray } = props;
     
-    const reviewsArray = [];
+    let reviewsArray = [];
     for (let i = feedbacksArray.length-3; i < feedbacksArray.length; i++) {
         reviewsArray.push(
             <Col className='text-center' sm='4'>
@@ -16,7 +16,7 @@ const Reviews = ( props ) => {
     return (
         <Container>
             <Row className='text-center'>
-                <h2>WHAT MY CUSTOMERS HAVE TO SAY</h2>
+                <h2>What My Customers Have To Say</h2>
             </Row>
             <Row className='row-content align-items-center'>
                 {reviewsArray}

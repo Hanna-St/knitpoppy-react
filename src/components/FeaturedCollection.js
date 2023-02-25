@@ -9,7 +9,7 @@ const FeaturedCollection = (props) => {
         if(imageWorks[i].featured) {
             initialArray.push(
                 <Col className='text-center' sm='4'>
-                    <img className='d-flex img-thumbnail' src={imageWorks[i].image} alt=""/>
+                    <img className='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
                 </Col>
             )
             if(initialArray.length === 3) {
@@ -26,8 +26,8 @@ const FeaturedCollection = (props) => {
         for (let i = 0; i < imageWorks.length; i++) {
             if(imageWorks[i].featured) {
                 allFeaturedArray.push(
-                    <Col className='text-center' sm='4'>
-                        <img className='d-flex img-thumbnail' src={imageWorks[i].image} alt=""/>
+                    <Col className='text-center pb-4' sm='4'>
+                        <img className='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
                     </Col>
                 )
             }
@@ -38,7 +38,7 @@ const FeaturedCollection = (props) => {
     return (
         <Container>
             <Row className='text-center'>
-                <h2>FEATURED COLLECTION</h2>
+                <h2>Featured Collection</h2>
             </Row>
             <Row className='row-content align-items-center'>
                 {featuredArray}
