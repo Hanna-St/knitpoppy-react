@@ -8,10 +8,9 @@ const Footer = () => {
                 <Row>
                     <Col sm='6' className='text-center'>
                         <h5>Links</h5>
-                        <ul className='list-unstyled'>
+                        <ul class='list-unstyled'>
                             <li>
-                                <Link style={{ textDecoration: 'none' }}
-                                className='text-info' to='/'>Leave Feedback</Link>
+                                <Link style={{ textDecoration: 'none' }} className='text-info' to='/'>Leave Feedback</Link>
                             </li>
                             <li>
                                 <Link style={{ textDecoration: 'none' }} className='text-info' to='/'>Shipping&Returns</Link>

@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <Navbar light expand='md'>
             <NavbarBrand className='ms-5' href='/'>
-                <img src={PoppyLogo}  alt='poppy logo' className='float-start' />
+                <img src={PoppyLogo}  alt='poppy logo' class='float-start' />
             </NavbarBrand>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
@@ -54,7 +54,7 @@ const Header = () => {
                         <NavLink className='nav-link' to='/contact'>Contact</NavLink>
                     </NavItem>
                 </Nav>
-                    <span className='ml-auto'>
+                    <span class='ml-auto'>
                         <Container>
                             <Row >
                                 <Col className='text-center'>

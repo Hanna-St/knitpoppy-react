@@ -25,7 +25,7 @@ h2, h4, h5 {
 
 .row-content {
   padding: 50px 50px;
-  min-height: 200px;
+  min-height: 150px;
 }
 
 .breadcrumb {
@@ -35,6 +35,10 @@ h2, h4, h5 {
 .carousel-caption {
   background: rgba(0, 0, 0, 0.45);
 }
+
+/* .text-info {
+  color: #17a2b8 !important;
+} */
 
 footer {
   background-image: linear-gradient(rgb(249, 207, 214), white);

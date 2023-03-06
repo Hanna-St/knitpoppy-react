@@ -9,7 +9,7 @@ const FeaturedCollection = (props) => {
         if(imageWorks[i].featured) {
             initialArray.push(
                 <Col className='text-center' sm='4'>
-                    <img className='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
+                    <img class='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
                 </Col>
             )
             if(initialArray.length === 3) {
@@ -27,7 +27,7 @@ const FeaturedCollection = (props) => {
             if(imageWorks[i].featured) {
                 allFeaturedArray.push(
                     <Col className='text-center pb-4' sm='4'>
-                        <img className='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
+                        <img class='d-flex img-thumbnail' src={imageWorks[i].images[0]} alt=""/>
                     </Col>
                 )
             }
