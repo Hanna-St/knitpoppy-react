@@ -1,8 +1,15 @@
 import { Col, Container, FormGroup, Label, Row, Button } from "reactstrap";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import SubHeader from "../components/SubHeader";
+import { validateContactForm } from "../utils/validateContactForm";
 
 const ContactPage = () => {
+    const handleSubmit = (values, { resetForm }) => {
+        console.log('form values:', values);
+        console.log('in JSON format:', JSON.stringify(values));
+        resetForm();
+    };
+
     return (
         <Container>
             <SubHeader current='Contact' />
@@ -13,27 +20,27 @@ const ContactPage = () => {
                 <Col md='9'>
                     <Formik
                         initialValues={{
-                            Name: '',
+                            name: '',
                             email: '',
                             message: ''
                             }}
-                        // onSubmit={handleSubmit}
-                        // validate={validateContactForm}
+                        onSubmit={handleSubmit}
+                        validate={validateContactForm}
                     >
                         <Form>
                             <FormGroup row>
-                                <Label htmlFor='Name' md='2'>
+                                <Label htmlFor='name' md='2'>
                                     Name<span class="text-danger">*</span>
                                 </Label>
                                 <Col md='4'>
                                     <Field
                                         className='form-control' 
-                                        name='Name'
+                                        name='name'
                                         placeholder='Name'
                                     />
-                                    {/* <ErrorMessage name='Name'>
+                                    <ErrorMessage name='name'>
                                         {(msg) => <p className='text-danger'>{msg}</p>}
-                                    </ErrorMessage> */}
+                                    </ErrorMessage>
                                 </Col>
                                 <Label htmlFor='email' md='1'>
                                     Email<span class="text-danger">*</span>
@@ -44,9 +51,9 @@ const ContactPage = () => {
                                         name='email'
                                         placeholder='Email'
                                     />
-                                    {/* <ErrorMessage name='email'>
+                                    <ErrorMessage name='email'>
                                         {(msg) => <p className='text-danger'>{msg}</p>}
-                                    </ErrorMessage> */}
+                                    </ErrorMessage>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -58,8 +65,11 @@ const ContactPage = () => {
                                         className='form-control'
                                         name='message'
                                         as='textarea'
-                                        rows='12'
+                                        rows='18'
                                     />
+                                    <ErrorMessage name='message'>
+                                        {(msg) => <p className='text-danger'>{msg}</p>}
+                                    </ErrorMessage>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
