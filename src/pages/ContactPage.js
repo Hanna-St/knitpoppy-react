@@ -65,7 +65,7 @@ const ContactPage = () => {
                                         className='form-control'
                                         name='message'
                                         as='textarea'
-                                        rows='18'
+                                        rows='16'
                                     />
                                     <ErrorMessage name='message'>
                                         {(msg) => <p className='text-danger'>{msg}</p>}

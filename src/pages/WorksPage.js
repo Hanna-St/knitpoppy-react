@@ -1,4 +1,4 @@
-import { Container, Row } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import SubHeader from "../components/SubHeader";
 
 const WorksPage = () => {
@@ -6,7 +6,9 @@ const WorksPage = () => {
         <Container>
             <SubHeader current='Works' />
             <Row className='text-center'>
-                <h2>Works</h2>
+                <Col xs='12'>
+                    <h2>Works</h2>
+                </Col>
             </Row>
         </Container>
     );

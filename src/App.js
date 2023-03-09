@@ -10,6 +10,7 @@ import TrackingPage from './pages/TrackingPage';
 import './App.css';
 import BagsPage from './pages/BagsPage';
 import HomeDecorPage from './pages/HomeDecorPage';
+import FeedbackPage from './pages/FeedbackPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='home_decor' element={<HomeDecorPage />} />
         <Route path='tracking' element={<TrackingPage />} />
         <Route path='contact' element={<ContactPage />} />
+        <Route path='feedback' element={<FeedbackPage />} />
       </Routes>
       <Footer />
     </div>

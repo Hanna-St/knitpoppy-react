@@ -10,7 +10,7 @@ const Footer = () => {
                         <h5>Links</h5>
                         <ul class='list-unstyled'>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} className='text-info' to='/'>Leave Feedback</Link>
+                                <Link style={{ textDecoration: 'none' }} className='text-info' to='/feedback'>Leave Feedback</Link>
                             </li>
                             <li>
                                 <Link style={{ textDecoration: 'none' }} className='text-info' to='/'>Shipping&Returns</Link>
