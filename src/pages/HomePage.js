@@ -8,6 +8,7 @@ import { WORKS } from '../app/shared/WORKS';
 import { CAROUSEL } from "../app/shared/CAROUSEL";
 import MainCarousel from '../components/MainCarousel';
 import SubHeader from "../components/SubHeader";
+import GoToTop from "../components/GoToTop";
 
 const HomePage = () => {
     const title = "Handmade With Love";
@@ -20,6 +21,7 @@ const HomePage = () => {
             <Reviews feedbacksArray={FEEDBACKS} />
             <PictureAndText picture={DesignerPhoto} title={title} text={text} />
             <FeaturedCollection imageWorks={WORKS} />
+            <GoToTop />
         </Container>
     )
 };

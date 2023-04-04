@@ -3,6 +3,7 @@ import { WORKS } from "../app/shared/WORKS";
 import SubHeader from "../components/SubHeader";
 import LeftPictureCarousel from "../components/LeftPictureCarousel";
 import RightPictureCarousel from "../components/RightPictureCarousel";
+import GoToTop from "../components/GoToTop";
 
 const BagsPage = () => {
     let bagsArray = [];
@@ -28,6 +29,7 @@ const BagsPage = () => {
                 <h2>Bags</h2>
                 {leftRightCarousel}
             </Row>
+            <GoToTop />
         </Container>
     );
 }
