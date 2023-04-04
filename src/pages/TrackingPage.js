@@ -1,7 +1,8 @@
 import { Container, Row, Col, FormGroup, Label, Button } from "reactstrap";
 import SubHeader from "../components/SubHeader";
 import { Formik,Form, Field, ErrorMessage } from "formik";
-import { validateTrackingForm } from "../utils/validateTrackingForm";
+import { validateTrackingOrderNumber } from "../utils/validateTrackingOrderNumber";
+import { validateTrackingNumber } from "../utils/validateTrackingNumber";
 
 const TrackingPage = () => {
     const handleSubmit = (values, { resetForm }) => {
@@ -18,80 +19,90 @@ const TrackingPage = () => {
                     <br/>
                 </Col>
                 <Col md={{ size: 10, offset: 1 }}>
-                    <Formik
-                        initialValues={{
-                            orderNumber: '',
-                            email: '',
-                            trackingNumber: ''
-                            }}
-                        onSubmit={handleSubmit}
-                        validate={validateTrackingForm}
+                    <Row className='align-items-center row-content'>
+                        <Col md={5}>
+                            <Formik
+                                initialValues={{
+                                    orderNumber: '',
+                                    email: ''
+                                    }}
+                                onSubmit={handleSubmit}
+                                validate={validateTrackingOrderNumber}
                             >
-                        <Form className="border">
-                            <Row className='align-items-center row-content'>
-                                <Col md={5}>
-                                <FormGroup>
-                                    <Label htmlFor="orderNumber">
-                                    Order Number
-                                    </Label>
-                                    <Field
-                                        className='form-control' 
-                                        name='orderNumber'
-                                        placeholder=''
-                                    />
-                                    <ErrorMessage name='orderNumber'>
-                                        {(msg) => <p className='text-danger'>{msg}</p>}
-                                    </ErrorMessage>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label htmlFor="email">
-                                    Email
-                                    </Label>
-                                    <Field
-                                        className='form-control'
-                                        name='email'
-                                        placeholder=''
-                                    />
-                                    <ErrorMessage name='email'>
-                                        {(msg) => <p className='text-danger'>{msg}</p>}
-                                    </ErrorMessage>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Col md={10}>
-                                        <Button type='submit' color='info'>
-                                            Track
-                                        </Button>
-                                    </Col>
-                                </FormGroup>
-                                </Col>
-                                <Col md={2} className='text-center'>
-                                or
-                                </Col>
-                                <Col md={5}>
-                                <FormGroup>
-                                    <Label htmlFor="trackingNumber">
-                                    Tracking Number
-                                    </Label>
-                                    <Field
-                                        className='form-control'
-                                        name='trackingNumber'
-                                        placeholder=''
-                                    />
-                                    <ErrorMessage name='trackingNumber'>
-                                        {(msg) => <p className='text-danger'>{msg}</p>}
-                                    </ErrorMessage>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Col md={10}>
-                                        <Button type='submit' color='info'>
-                                            Track
-                                        </Button>
-                                    </Col>
-                                </FormGroup>
-                                </Col>
-                            </Row>
-                        </Form>
-                    </Formik>
+                                <Form>
+                                    <FormGroup>
+                                        <Label htmlFor="orderNumber">
+                                        Order Number
+                                        </Label>
+                                        <Field
+                                            className='form-control' 
+                                            name='orderNumber'
+                                            placeholder=''
+                                        />
+                                        <ErrorMessage name='orderNumber'>
+                                            {(msg) => <p className='text-danger'>{msg}</p>}
+                                        </ErrorMessage>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Label htmlFor="email">
+                                        Email
+                                        </Label>
+                                        <Field
+                                            className='form-control'
+                                            name='email'
+                                            placeholder=''
+                                        />
+                                        <ErrorMessage name='email'>
+                                            {(msg) => <p className='text-danger'>{msg}</p>}
+                                        </ErrorMessage>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Col md={10}>
+                                            <Button type='submit' color='info'>
+                                                Track
+                                            </Button>
+                                        </Col>
+                                    </FormGroup>
+                                </Form>
+                            </Formik>
+                        </Col>
+                        <Col md={2} className='text-center'>
+                            or
+                        </Col>
+                        <Col md={5}>
+                            <Formik
+                                initialValues={{
+                                    trackingNumber: ''
+                                    }}
+                                onSubmit={handleSubmit}
+                                validate={validateTrackingNumber}
+                            >
+                                <Form>
+                                    <FormGroup>
+                                        <Label htmlFor="trackingNumber">
+                                        Tracking Number
+                                        </Label>
+                                        <Field
+                                            className='form-control'
+                                            name='trackingNumber'
+                                            placeholder=''
+                                            validate={validateTrackingNumber}
+                                        />
+                                        <ErrorMessage name='trackingNumber'>
+                                            {(msg) => <p className='text-danger'>{msg}</p>}
+                                        </ErrorMessage>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Col md={10}>
+                                            <Button type='submit' color='info'>
+                                                Track
+                                            </Button>
+                                        </Col>
+                                    </FormGroup>
+                                </Form>
+                            </Formik>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>

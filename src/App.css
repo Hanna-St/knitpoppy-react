@@ -28,6 +28,16 @@ h2, h4, h5 {
   min-height: 150px;
 }
 
+.card-title {
+  font-weight: 570;
+  font-size: 1.5rem;
+}
+
+.card-img-overlay .card-title {
+  color: rgb(63, 68, 68);
+  background-color: rgba(255, 255, 255, 0.734);
+}
+
 .breadcrumb {
   background: white;
 }
