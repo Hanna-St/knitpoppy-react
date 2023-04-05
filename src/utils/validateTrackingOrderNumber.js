@@ -1,5 +1,5 @@
 export const validateTrackingOrderNumber = (values) => {
-    let errors;
+    const errors = {};
 
     if (!values.orderNumber) {
         errors.orderNumber = 'Required';

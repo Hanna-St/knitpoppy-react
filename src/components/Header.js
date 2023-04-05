@@ -16,6 +16,7 @@ import {
 import { NavLink, Link } from 'react-router-dom';
 import PoppyLogo from '../app/assets/img/logo.png';
 import { useState } from 'react';
+import UserLoginForm from '../user/UserLoginForm';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -59,7 +60,7 @@ const Header = () => {
                             <Row >
                                 <Col className='text-center'>
                                 <i class="fa-solid fa-magnifying-glass fa-xl text-info me-2"></i>
-                                <i class="fa-solid fa-user fa-xl text-info me-2"></i>
+                                <UserLoginForm />
                                 <i class="fa-solid fa-cart-shopping fa-xl text-info me-2"></i>
                                 </Col>
                             </Row>
