@@ -45,6 +45,10 @@ footer {
   background-color: rgb(63,179,211);
 }
 
+.icon-color {
+  color: rgb(63,179,211);
+}
+
 .navbar-light {
   background: linear-gradient(white, rgb(249, 207, 214));
   margin-bottom: 1rem;
@@ -83,6 +87,21 @@ footer {
 .carousel-caption {
   background: rgba(0, 0, 0, 0.45);
 }
+
+.search-container {
+  float: left;
+}
+
+.search-container button {
+  background: rgb(236, 178, 178);
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: rgb(63,179,211);
+}
+
 
 
 

@@ -38,9 +38,9 @@ const Footer = () => {
                 <Row>
                     <Col className='text-center'>
                         <h5>Social</h5>
-                        <a href="http://instagram.com/" class="text-info"><i class="fa-brands fa-instagram fa-2xl"></i></a>{' '}
-                        <a href="http://facebook.com/" class="text-info"><i class="fa-brands fa-facebook fa-2xl"></i></a>{' '}
-                        <a href="http://youtube.com/" class="text-info"><i class="fa-brands fa-youtube fa-2xl"></i></a>{' '}
+                        <a href="http://instagram.com/" class="icon-color"><i class="fa-brands fa-instagram fa-2xl"></i></a>{' '}
+                        <a href="http://facebook.com/" class="icon-color"><i class="fa-brands fa-facebook fa-2xl"></i></a>{' '}
+                        <a href="http://youtube.com/" class="icon-color"><i class="fa-brands fa-youtube fa-2xl"></i></a>{' '}
                     </Col>
                 </Row>
             </Container>

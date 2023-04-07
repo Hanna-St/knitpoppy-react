@@ -27,7 +27,7 @@ const UserLoginForm = () => {
             onClick={() => setLoginModalOpen(true)}
             style={{ border: 'none', background: 'none' }}
         >
-            <i class="fa-solid fa-user fa-2xl text-info"></i>
+            <i class="fa-solid fa-user fa-2xl icon-color"></i>
         </Button>
         </span>
         <Modal isOpen={loginModalOpen}>

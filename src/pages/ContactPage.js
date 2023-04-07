@@ -85,14 +85,14 @@ const ContactPage = () => {
                 <Col md='3' className="text-center">
                     <h5>Follow Me</h5>
                     <div>
-                        <a href="http://instagram.com/" class="text-info p-2"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                        <a href="http://facebook.com/" class="text-info p-2"><i class="fa-brands fa-facebook fa-xl"></i></a>
-                        <a href="http://youtube.com/" class="text-info p-2"><i class="fa-brands fa-youtube fa-xl"></i></a>
+                        <a href="http://instagram.com/" class="icon-color p-2"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="http://facebook.com/" class="icon-color p-2"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                        <a href="http://youtube.com/" class="icon-color p-2"><i class="fa-brands fa-youtube fa-xl"></i></a>
                     </div>
                     <hr/>
                     <h5>Contact Info</h5>
-                    <a role="button" class="text-info" href="tel:+12098457234"><i class="fa fa-phone"></i> 1-209-845-7234</a><br />
-                    <a role="button" class="text-info" href="mailto:knit.poppy@gmail.com"><i class="fa-solid fa-envelope"></i> knit.poppy@gmail.com</a>
+                    <a role="button" class="icon-color" href="tel:+12098457234"><i class="fa fa-phone"></i> 1-209-845-7234</a><br />
+                    <a role="button" class="icon-color" href="mailto:knit.poppy@gmail.com"><i class="fa-solid fa-envelope"></i> knit.poppy@gmail.com</a>
                 </Col>
             </Row>
         </Container>
